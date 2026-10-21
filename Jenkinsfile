@@ -27,7 +27,14 @@ pipeline {
                                  fingerprint: true
             }
         }
+        stage('Deploy') {
+            steps {
+                sh 'bash deploy.sh'
+            }
+        }
+
     }
+
 }
 
 
