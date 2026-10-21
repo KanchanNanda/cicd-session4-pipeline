@@ -8,7 +8,7 @@ if [ ! -f "$FILE" ]; then
 
 fi
 
-if grep -q '<title>Wrong Title</title>' "$FILE"; then
+if grep -q '<title>CI/CD Demo</title>' "$FILE"; then
 	echo "PASS: build artifact test successful"
 
 else
