@@ -15,6 +15,12 @@ pipeline {
             }
         }
 
+        stage('Test') {
+            steps {
+                sh 'bash test.sh' 
+            }
+        }
+
         stage('Archive Artifact') {
             steps {
                 archiveArtifacts artifacts: 'build/index.html',
