@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -13,12 +14,15 @@ pipeline {
                 sh 'mkdir -p build && cp app/index.html build/index.html'
             }
         }
+
+        stage('Archive Artifact') {
+            steps {
+                archiveArtifacts artifacts: 'build/index.html',
+                                 fingerprint: true
+            }
+        }
     }
 }
-
-
-
-
 
 
 
