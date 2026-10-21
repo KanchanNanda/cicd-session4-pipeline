@@ -8,7 +8,7 @@ if [ ! -f "$FILE" ]; then
 
 fi
 
-if grep -q '<title>Invalid Title</title>' "$FILE"; then
+if grep -q '<title>CI/CD Demo</title>' "$FILE"; then
 	echo "Pass: Title validation successful"
 else
 	echo "Fail: Title validation failed"
